@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mridul Saravanan - Certificates</title>
-  <meta name="description" content="Certificate of Completion: The ABCs of the Banking and Insurance Business - AML, KYC, the NAIC, IFRS, and More (LinkedIn Learning), and what I learned from it.">
-  <meta property="og:title" content="The ABCs of the Banking and Insurance Business - Certificate of Completion">
-  <meta property="og:description" content="Mridul Saravanan - LinkedIn Learning - Completed 9 Oct 2026 - What I learned and how it connects to my work">
+  <meta name="description" content="Course certificates of Mridul Saravanan (S Mridul) - banking and insurance compliance (AML, KYC) and Claude Code / Claude Cowork - with what I learned from each.">
+  <meta property="og:title" content="Mridul Saravanan - Certificates">
+  <meta property="og:description" content="AML, KYC and banking (LinkedIn Learning) - Claude Code and Claude Cowork Masterclass (Udemy) - what I learned from each">
   <meta property="og:image" content="https://mridulsn.github.io/certificates/assets/abcs-banking-insurance-aml-kyc.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.className += ' js';</script>
   <style>
     :root {
       --bg: #f5f1ea;
@@ -52,11 +53,28 @@
 
     header.top { border-bottom: 1px solid var(--line); }
     header.top .wrap {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 44px; font-size: 14px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      min-height: 52px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px;
     }
-    .brand { font-weight: 600; }
+    .brand { font-weight: 600; font-size: 14px; }
     .brand span { color: var(--muted); font-weight: 400; }
+
+    .tabs {
+      display: inline-flex; gap: 4px; padding: 4px;
+      background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+    }
+    .tabs a {
+      padding: 6px 14px; border-radius: 999px;
+      font-size: 13.5px; font-weight: 500; text-decoration: none; color: var(--muted);
+      white-space: nowrap; transition: background .2s, color .2s;
+    }
+    .tabs a:hover { color: var(--ink); }
+    .tabs a[aria-selected="true"] { background: var(--accent); color: var(--on-accent); }
+
+    .panel + .panel { border-top: 1px solid var(--line); margin-top: 28px; }
+    .js .panel { display: none; }
+    .js .panel.active { display: block; }
+    .js .panel + .panel { border-top: 0; margin-top: 0; }
 
     .hero { padding: 16px 0 14px; }
     .eyebrow {
@@ -72,13 +90,13 @@
     }
     .sub { margin: 0 0 8px; font-family: Fraunces, Georgia, serif; font-size: clamp(17px, 1.7vw, 21px); color: var(--muted); }
     .meta { margin: 0; color: var(--muted); font-size: 14px; }
-    .meta b { color: var(--ink); font-weight: 600; }
+    .meta b { color: var(--ink); font-weight: 600; white-space: nowrap; }
     .meta i { font-style: normal; margin: 0 8px; opacity: .5; }
     .meta span { white-space: nowrap; }
 
     .layout {
       display: grid; gap: 28px; align-items: start;
-      grid-template-columns: minmax(0, max(380px, min(52%, calc((100vh - 330px) * 1.294 + 24px)))) minmax(0, 1fr);
+      grid-template-columns: minmax(0, max(380px, min(52%, calc((100vh - 340px) * var(--ratio) + 24px)))) minmax(0, 1fr);
     }
 
     .frame {
@@ -127,7 +145,6 @@
     ul.points b { font-weight: 600; }
     ul.points span { color: var(--muted); }
 
-
     ul.chips { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
     ul.chips li {
       padding: 4px 11px; border-radius: 999px; font-size: 13.5px;
@@ -138,7 +155,6 @@
 
     @media (max-width: 860px) {
       .layout { grid-template-columns: 1fr; }
-      .hero { padding-top: 22px; }
     }
   </style>
 </head>
@@ -146,68 +162,156 @@
   <header class="top">
     <div class="wrap">
       <div class="brand">Mridul Saravanan <span>/ Certificates</span></div>
+      <nav class="tabs" role="tablist" aria-label="Certificates">
+        <a href="#aml-kyc" role="tab" aria-selected="true" data-tab="aml-kyc">AML &amp; KYC</a>
+        <a href="#claude-code" role="tab" aria-selected="false" data-tab="claude-code">Claude Code</a>
+      </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Certificate of Completion</div>
-      <h1>The ABCs of the Banking and Insurance Business</h1>
-      <p class="sub">AML, KYC, the NAIC, IFRS, and More</p>
-      <p class="meta"><b>LinkedIn Learning</b><i>/</i><span>Completed 9 Oct 2026</span><i>/</i><span>Finance</span></p>
-    </section>
 
-    <div class="layout">
-      <div>
-        <figure class="frame">
-          <a href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener" title="Open the original certificate (PDF)">
-            <img src="assets/abcs-banking-insurance-aml-kyc.png" width="1760" height="1360"
-                 alt="LinkedIn Learning certificate of completion for The ABCs of the Banking and Insurance Business: AML, KYC, the NAIC, IFRS, and More, completed by Mridul Saravanan on Oct 09, 2026">
-          </a>
-        </figure>
-        <div class="actions">
-          <a class="btn primary" href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-            View original PDF
-          </a>
-          <a class="btn" href="assets/abcs-banking-insurance-aml-kyc.pdf" download="Mridul-Saravanan-ABCs-Banking-Insurance-Certificate.pdf">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-            Download
-          </a>
-        </div>
+    <section class="panel active" id="aml-kyc" role="tabpanel" style="--ratio: 1.294">
+      <div class="hero">
+        <div class="eyebrow">Certificate of Completion</div>
+        <h1>The ABCs of the Banking and Insurance Business</h1>
+        <p class="sub">AML, KYC, the NAIC, IFRS, and More</p>
+        <p class="meta"><b>LinkedIn Learning</b><i>/</i><span>Completed 9 Oct 2026</span><i>/</i><span>Finance</span></p>
       </div>
 
-      <section class="learned">
-        <h2>What I learned</h2>
-
-        <div class="group">
-          <h3>Where it connects to my work</h3>
-          <ul class="points">
-            <li><b>Due diligence</b> <span>- classified entities and their controlling persons</span></li>
-            <li><b>Customer types</b> <span>- handled trusts, charities, partnerships, nominees</span></li>
-            <li><b>Screening</b> <span>- referred sanctions and PEP hits to specialist teams</span></li>
-            <li><b>Data privacy</b> <span>- worked with sensitive customer records daily</span></li>
-          </ul>
+      <div class="layout">
+        <div>
+          <figure class="frame">
+            <a href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener" title="Open the original certificate (PDF)">
+              <img src="assets/abcs-banking-insurance-aml-kyc.png" width="1760" height="1360"
+                   alt="LinkedIn Learning certificate of completion for The ABCs of the Banking and Insurance Business: AML, KYC, the NAIC, IFRS, and More, completed by Mridul Saravanan on Oct 09, 2026">
+            </a>
+          </figure>
+          <div class="actions">
+            <a class="btn primary" href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+              View original PDF
+            </a>
+            <a class="btn" href="assets/abcs-banking-insurance-aml-kyc.pdf" download="Mridul-Saravanan-ABCs-Banking-Insurance-Certificate.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download
+            </a>
+          </div>
         </div>
 
-        <div class="group">
-          <h3>New to me</h3>
-          <ul class="chips">
-            <li>Net interest margin</li>
-            <li>Asset-liability matching</li>
-            <li>Shadow banking</li>
-            <li>Fed, OCC and FDIC</li>
-            <li>CCAR stress tests</li>
-            <li>Life, health and P&amp;C insurers</li>
-            <li>How insurers invest premiums</li>
-            <li>NAIC and reserves</li>
-            <li>Annuity rules</li>
-            <li>IFRS 17</li>
-          </ul>
+        <section class="learned">
+          <h2>What I learned</h2>
+          <div class="group">
+            <h3>Where it connects to my work</h3>
+            <ul class="points">
+              <li><b>Due diligence</b> <span>- classified entities and their controlling persons</span></li>
+              <li><b>Customer types</b> <span>- handled trusts, charities, partnerships, nominees</span></li>
+              <li><b>Screening</b> <span>- referred sanctions and PEP hits to specialist teams</span></li>
+              <li><b>Data privacy</b> <span>- worked with sensitive customer records daily</span></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>New to me</h3>
+            <ul class="chips">
+              <li>Net interest margin</li>
+              <li>Asset-liability matching</li>
+              <li>Shadow banking</li>
+              <li>Fed, OCC and FDIC</li>
+              <li>CCAR stress tests</li>
+              <li>Life, health and P&amp;C insurers</li>
+              <li>How insurers invest premiums</li>
+              <li>NAIC and reserves</li>
+              <li>Annuity rules</li>
+              <li>IFRS 17</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel" id="claude-code" role="tabpanel" style="--ratio: 1.345">
+      <div class="hero">
+        <div class="eyebrow">Certificate of Completion</div>
+        <h1>The Complete Claude Code &amp; Claude Cowork Masterclass</h1>
+        <p class="sub">Prof. Ryan Ahmed, Stemplicity Inc.</p>
+        <p class="meta"><b>Udemy</b><i>/</i><span>Completed 8 Oct 2026</span><i>/</i><span>22 hours</span></p>
+      </div>
+
+      <div class="layout">
+        <div>
+          <figure class="frame">
+            <a href="https://ude.my/UC-a91b0c55-679c-4c96-ac34-31f64a9b1538" target="_blank" rel="noopener" title="Verify this certificate on Udemy">
+              <img src="assets/claude-code-cowork-masterclass.jpg" width="1600" height="1190" loading="lazy"
+                   alt="Udemy certificate of completion for The Complete Claude Code and Claude Cowork Masterclass 2026, awarded to S Mridul on Oct 8, 2026, 22 total hours">
+            </a>
+          </figure>
+          <div class="actions">
+            <a class="btn primary" href="https://ude.my/UC-a91b0c55-679c-4c96-ac34-31f64a9b1538" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              Verify on Udemy
+            </a>
+            <a class="btn" href="assets/claude-code-cowork-masterclass.pdf" download="S-Mridul-Claude-Code-Cowork-Masterclass-Certificate.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download
+            </a>
+          </div>
         </div>
-      </section>
-    </div>
+
+        <section class="learned">
+          <h2>What I learned</h2>
+          <div class="group">
+            <h3>Where it connects to my work</h3>
+            <ul class="points">
+              <li><b>Building with Claude Code</b> <span>- made this page and my job tracker with it</span></li>
+              <li><b>Skills and commands</b> <span>- set up custom skills for repeat tasks</span></li>
+              <li><b>Connectors (MCP)</b> <span>- linked Claude to Notion, Canva and others</span></li>
+              <li><b>Tokens and context</b> <span>- measured token costs in my AI Ops portfolio</span></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>New to me</h3>
+            <ul class="chips">
+              <li>Claude Cowork</li>
+              <li>Claude in Excel</li>
+              <li>Claude in PowerPoint</li>
+              <li>Deep Research mode</li>
+              <li>Prompt engineering techniques</li>
+              <li>Data analysis plugins</li>
+              <li>PDF to Excel extraction</li>
+              <li>DCF and LBO models</li>
+              <li>Agent automations</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
   </main>
 
+  <script>
+    (function () {
+      var tabs = [].slice.call(document.querySelectorAll('.tabs a'));
+      var ids = tabs.map(function (t) { return t.getAttribute('data-tab'); });
+      function show(id) {
+        if (ids.indexOf(id) < 0) id = ids[0];
+        tabs.forEach(function (t) {
+          t.setAttribute('aria-selected', t.getAttribute('data-tab') === id ? 'true' : 'false');
+        });
+        ids.forEach(function (i) {
+          document.getElementById(i).classList.toggle('active', i === id);
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          e.preventDefault();
+          var id = t.getAttribute('data-tab');
+          history.replaceState(null, '', '#' + id);
+          show(id);
+        });
+      });
+      window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+      show(location.hash.slice(1));
+    })();
+  </script>
 </body>
 </html>
