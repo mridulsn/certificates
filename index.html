@@ -24,7 +24,7 @@
       --accent-soft: #e6f0fa;
       --gold: #a7803a;
       --on-accent: #ffffff;
-      --shadow: 0 1px 2px rgba(27,36,48,.06), 0 18px 50px -18px rgba(27,36,48,.28);
+      --shadow: 0 1px 2px rgba(27,36,48,.06), 0 14px 40px -16px rgba(27,36,48,.28);
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -37,7 +37,7 @@
         --accent-soft: #16283b;
         --gold: #d2ac63;
         --on-accent: #0b1a2a;
-        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 18px 50px -18px rgba(0,0,0,.7);
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 40px -16px rgba(0,0,0,.7);
       }
     }
     * { box-sizing: border-box; }
@@ -46,114 +46,101 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font: 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
     }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
     header.top { border-bottom: 1px solid var(--line); }
-    header.top .wrap { display: flex; align-items: center; height: 60px; }
-    .brand { font-weight: 600; letter-spacing: .01em; }
+    header.top .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 44px; font-size: 14px;
+    }
+    .brand { font-weight: 600; }
     .brand span { color: var(--muted); font-weight: 400; }
 
-    .hero { padding: 56px 0 0; }
+    .hero { padding: 16px 0 14px; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
       color: var(--gold);
     }
-    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--gold); }
     h1 {
-      font-family: Fraunces, Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1.12;
-      letter-spacing: -.015em;
-      margin: 14px 0 0;
-      max-width: 24ch;
+      font-family: Fraunces, Georgia, serif; font-weight: 600;
+      font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -.01em;
+      margin: 6px 0 2px;
     }
-    h1 em { font-style: normal; color: var(--muted); font-weight: 400; }
+    .sub { margin: 0 0 8px; font-family: Fraunces, Georgia, serif; font-size: clamp(17px, 1.7vw, 21px); color: var(--muted); }
+    .meta { margin: 0; color: var(--muted); font-size: 14px; }
+    .meta b { color: var(--ink); font-weight: 600; }
+    .meta i { font-style: normal; margin: 0 8px; opacity: .5; }
+    .meta span { white-space: nowrap; }
 
-    .facts {
-      display: flex; flex-wrap: wrap; gap: 10px 32px;
-      margin: 26px 0 0; padding: 0; list-style: none;
+    .layout {
+      display: grid; gap: 28px; align-items: start;
+      grid-template-columns: minmax(0, max(380px, min(52%, calc((100vh - 330px) * 1.294 + 24px)))) minmax(0, 1fr);
     }
-    .facts li { display: flex; flex-direction: column; }
-    .facts b { font-size: 20px; font-weight: 600; font-family: Fraunces, Georgia, serif; }
-    .facts small { color: var(--muted); font-size: 13px; }
 
     .frame {
-      margin: 36px 0 0;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: clamp(10px, 2.4vw, 22px);
+      margin: 0;
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 12px; padding: 12px;
       box-shadow: var(--shadow);
     }
     .frame a { display: block; border-radius: 6px; overflow: hidden; }
     .frame img { display: block; width: 100%; height: auto; transition: transform .4s ease; }
     .frame a:hover img { transform: scale(1.01); }
 
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 11px 18px; border-radius: 999px;
-      font: 500 15px/1 Inter, system-ui, sans-serif;
-      text-decoration: none;
+      padding: 9px 16px; border-radius: 999px;
+      font: 500 14px/1 Inter, system-ui, sans-serif; text-decoration: none;
       border: 1px solid var(--line); background: var(--paper); color: var(--ink);
       transition: border-color .2s;
     }
     .btn:hover { border-color: var(--accent); }
     .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
     .btn.primary:hover { filter: brightness(1.08); }
-    .btn svg { width: 16px; height: 16px; }
+    .btn svg { width: 15px; height: 15px; }
 
-    .learned { padding: 72px 0 0; }
+    .learned {
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 12px; padding: 16px 22px;
+    }
     h2 {
       font-family: Fraunces, Georgia, serif; font-weight: 600;
-      font-size: clamp(26px, 3.6vw, 34px); line-height: 1.2;
-      margin: 0 0 28px;
+      font-size: 22px; line-height: 1.2; margin: 0 0 10px;
     }
     h3 {
-      font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-      color: var(--gold); margin: 0 0 14px;
+      font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--gold); margin: 0 0 8px;
     }
-    .block + .block { margin-top: 40px; }
+    .group + .group { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 
-    .work {
-      background: var(--paper); border: 1px solid var(--line);
-      border-left: 4px solid var(--accent);
-      border-radius: 12px; padding: 22px 24px;
-    }
-    .work p { margin: 0 0 14px; color: var(--muted); }
-    ul.points { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
-    ul.points li { padding-left: 18px; position: relative; }
+    ul.points { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+    ul.points li { padding-left: 16px; position: relative; }
     ul.points li::before {
-      content: ""; position: absolute; left: 0; top: .62em;
-      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      content: ""; position: absolute; left: 0; top: .6em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
     }
-    ul.points b, .tile b { font-weight: 600; }
+    ul.points b { font-weight: 600; }
+    ul.points span { color: var(--muted); }
 
-    .knew {
-      margin: 0; padding: 18px 22px;
-      border: 1px dashed var(--line); border-radius: 12px;
+    p.knew { margin: 0; }
+    p.knew span { color: var(--muted); }
+
+    ul.chips { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
+    ul.chips li {
+      padding: 4px 11px; border-radius: 999px; font-size: 13.5px;
+      background: var(--accent-soft); color: var(--ink);
     }
 
-    .tiles {
-      display: grid; gap: 14px;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    }
-    .tile {
-      background: var(--paper); border: 1px solid var(--line);
-      border-radius: 12px; padding: 18px 20px;
-    }
-    .tile b { display: block; margin-bottom: 4px; }
-    .tile.wide { grid-column: 1 / -1; }
-    .tile span { color: var(--muted); font-size: 15px; }
+    main { padding-bottom: 20px; }
 
-    footer {
-      border-top: 1px solid var(--line);
-      margin-top: 72px; padding: 24px 0 40px;
-      color: var(--muted); font-size: 14px;
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 22px; }
     }
   </style>
 </head>
@@ -167,71 +154,67 @@
   <main class="wrap">
     <section class="hero">
       <div class="eyebrow">Certificate of Completion</div>
-      <h1>The ABCs of the Banking and Insurance Business <em>- AML, KYC, the NAIC, IFRS, and More</em></h1>
-
-      <ul class="facts">
-        <li><b>LinkedIn Learning</b><small>Issued by</small></li>
-        <li><b>9 Oct 2026</b><small>Completed</small></li>
-        <li><b>Finance</b><small>Field of study</small></li>
-      </ul>
-
-      <figure class="frame">
-        <a href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener" title="Open the original certificate (PDF)">
-          <img src="assets/abcs-banking-insurance-aml-kyc.png" width="1760" height="1360"
-               alt="LinkedIn Learning certificate of completion for The ABCs of the Banking and Insurance Business: AML, KYC, the NAIC, IFRS, and More, completed by Mridul Saravanan on Oct 09, 2026">
-        </a>
-      </figure>
-
-      <div class="actions">
-        <a class="btn primary" href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-          View original PDF
-        </a>
-        <a class="btn" href="assets/abcs-banking-insurance-aml-kyc.pdf" download="Mridul-Saravanan-ABCs-Banking-Insurance-Certificate.pdf">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-          Download
-        </a>
-      </div>
+      <h1>The ABCs of the Banking and Insurance Business</h1>
+      <p class="sub">AML, KYC, the NAIC, IFRS, and More</p>
+      <p class="meta"><b>LinkedIn Learning</b><i>/</i><span>Completed 9 Oct 2026</span><i>/</i><span>Finance</span></p>
     </section>
 
-    <section class="learned">
-      <h2>What I learned</h2>
+    <div class="layout">
+      <div>
+        <figure class="frame">
+          <a href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener" title="Open the original certificate (PDF)">
+            <img src="assets/abcs-banking-insurance-aml-kyc.png" width="1760" height="1360"
+                 alt="LinkedIn Learning certificate of completion for The ABCs of the Banking and Insurance Business: AML, KYC, the NAIC, IFRS, and More, completed by Mridul Saravanan on Oct 09, 2026">
+          </a>
+        </figure>
+        <div class="actions">
+          <a class="btn primary" href="assets/abcs-banking-insurance-aml-kyc.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+            View original PDF
+          </a>
+          <a class="btn" href="assets/abcs-banking-insurance-aml-kyc.pdf" download="Mridul-Saravanan-ABCs-Banking-Insurance-Certificate.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
 
-      <div class="block">
-        <h3>Where it connects to my work</h3>
-        <div class="work">
-          <p>Several parts of the course covered work I have done in my operations role, so it was useful to see the wider framework behind it.</p>
+      <section class="learned">
+        <h2>What I learned</h2>
+
+        <div class="group">
+          <h3>Where it connects to my work</h3>
           <ul class="points">
-            <li><b>Customer identification and due diligence</b> - in my role I identified and classified entity account holders and looked through ownership structures to find the controlling persons.</li>
-            <li><b>KYC for different customer types</b> - I handled trusts, charities, partnerships and nominee structures; the course explained why each type needs a different approach.</li>
-            <li><b>Sanctions and PEP screening</b> - I saw screening hits and referred them to the specialist teams responsible for them; the course showed where this fits in a full AML programme.</li>
-            <li><b>Data privacy and security</b> - I worked with sensitive customer records every day, so this chapter matched how I already had to work.</li>
+            <li><b>Due diligence</b> <span>- classified entities and their controlling persons</span></li>
+            <li><b>Customer types</b> <span>- handled trusts, charities, partnerships, nominees</span></li>
+            <li><b>Screening</b> <span>- referred sanctions and PEP hits to specialist teams</span></li>
+            <li><b>Data privacy</b> <span>- worked with sensitive customer records daily</span></li>
           </ul>
         </div>
-      </div>
 
-      <div class="block">
-        <h3>Already knew - now understand better</h3>
-        <p class="knew"><b>AML and KYC basics</b> - the risk-based approach, ongoing monitoring and suspicious activity monitoring, plus how AML programmes are audited and reported.</p>
-      </div>
-
-      <div class="block">
-        <h3>New to me</h3>
-        <div class="tiles">
-          <div class="tile"><b>How a bank makes money</b><span>The net interest margin: the gap between what a bank earns on loans and what it pays on deposits.</span></div>
-          <div class="tile"><b>Asset-liability matching</b><span>Why borrowing short-term and lending long-term is a core risk every bank has to manage.</span></div>
-          <div class="tile"><b>Shadow banking</b><span>Lenders that do bank-like work outside normal banking regulation.</span></div>
-          <div class="tile"><b>Who oversees US banks</b><span>The roles of the Fed, the OCC and the FDIC, and how CCAR stress tests check whether a bank could survive a bad economy.</span></div>
-          <div class="tile"><b>The insurance business</b><span>Life, health, property and casualty, and specialty insurers - and how insurers earn by investing premiums before claims are paid.</span></div>
-          <div class="tile"><b>Insurance regulation</b><span>The NAIC and state-level rules, insurance reserves, and the rules for selling annuities.</span></div>
-          <div class="tile wide"><b>IFRS 17</b><span>The international accounting standard for how insurers report their contracts and profits over time.</span></div>
+        <div class="group">
+          <h3>Already knew - now understand better</h3>
+          <p class="knew"><b>AML and KYC basics</b> <span>- risk-based approach, monitoring, audits</span></p>
         </div>
-      </div>
-    </section>
+
+        <div class="group">
+          <h3>New to me</h3>
+          <ul class="chips">
+            <li>Net interest margin</li>
+            <li>Asset-liability matching</li>
+            <li>Shadow banking</li>
+            <li>Fed, OCC and FDIC</li>
+            <li>CCAR stress tests</li>
+            <li>Life, health and P&amp;C insurers</li>
+            <li>How insurers invest premiums</li>
+            <li>NAIC and reserves</li>
+            <li>Annuity rules</li>
+            <li>IFRS 17</li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div class="wrap">Mridul Saravanan &middot; Certificates</div>
-  </footer>
 </body>
 </html>
